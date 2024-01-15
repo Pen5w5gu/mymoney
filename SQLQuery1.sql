@@ -8,21 +8,21 @@ CREATE TABLE dbo.Users (
 );
 
 -- Tạo bảng thu nhập
-CREATE TABLE dbo.ThuNhap (
+CREATE TABLE dbo.Income (
     ID INT IDENTITY(1,1) PRIMARY KEY,
     UserID INT,
-    Ngay DATE,
-    SoTien DECIMAL(10, 2),
-    MoTa TEXT,
+    date DATE,
+    income DECIMAL(10, 2),
+    detail TEXT,
     FOREIGN KEY (UserID) REFERENCES dbo.Users(ID)
 );
 
 -- Tạo bảng chi tiêu
-CREATE TABLE dbo.ChiTieu (
+CREATE TABLE dbo.Expense (
     ID INT IDENTITY(1,1) PRIMARY KEY,
     UserID INT,
-    Ngay DATE,
-    SoTien DECIMAL(10, 2),
-    MoTa TEXT,
+    date DATE,
+    expense DECIMAL(10, 2),
+    detail TEXT,
     FOREIGN KEY (UserID) REFERENCES dbo.Users(ID)
 );
