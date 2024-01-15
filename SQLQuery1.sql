@@ -1,5 +1,5 @@
 ﻿-- Tạo bảng người dùng
-CREATE TABLE dbo.Users (
+CREATE TABLE dbo.Account (
     ID INT IDENTITY(1,1) PRIMARY KEY,
     Username VARCHAR(50) NOT NULL,
     Password VARCHAR(255) NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE dbo.Income (
     date DATE,
     income DECIMAL(10, 2),
     detail TEXT,
-    FOREIGN KEY (UserID) REFERENCES dbo.Users(ID)
+    FOREIGN KEY (UserID) REFERENCES dbo.Account(ID)
 );
 
 -- Tạo bảng chi tiêu
@@ -24,5 +24,7 @@ CREATE TABLE dbo.Expense (
     date DATE,
     expense DECIMAL(10, 2),
     detail TEXT,
-    FOREIGN KEY (UserID) REFERENCES dbo.Users(ID)
+    FOREIGN KEY (UserID) REFERENCES dbo.Account(ID)
 );
+
+drop table Account
