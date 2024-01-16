@@ -41,6 +41,7 @@
 
                 </div>
             </form>
+                        
             <form action="signup" method="post" class="form-signup">
                 <div class="sub-cont">
                     <div class="img">
@@ -70,6 +71,11 @@
                                                         <input type="password" id="user-password" />
                                                     </label>
                                                     <button type="submit" class="submit">Sign Up</button>
+                                                    <label>
+                                                        <div class="alert alert-danger" role="alert">
+                                                            <p>${mess}</p>
+                                                        </div>
+                                                    </label>
                                                 </div>
                                                 </div>
                                                 </form>
