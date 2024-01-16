@@ -20,6 +20,7 @@
         <div class="cont">
             <form class="form-signin" action="login" method="post">
                 <div class="form sign-in">
+                    <input type="hidden" name="action" value="login">
                     <h2>Welcome</h2>
                     <br>
                     <label>
@@ -42,9 +43,10 @@
                 </div>
             </form>
                         
-            <form action="signup" method="post" class="form-signup">
+            <form action="login" method="post" class="form-signup">
                 <div class="sub-cont">
                     <div class="img">
+                        <input type="hidden" name="action" value="signup">
                         <div class="img__text m--up">
                             <h3>Don't have an account? Please Sign up!<h3>
                                     </div>
@@ -60,20 +62,20 @@
                                                     <h2>Create your Account</h2>
                                                     <label>
                                                         <span>Username</span>
-                                                        <input type="text" id="user-name" />
+                                                        <input type="usernameSignup" name="usernameSignup" />
                                                     </label>
                                                     <label>
                                                         <span>Email</span>
-                                                        <input type="email" id="user-email" />
+                                                        <input type="emailSignup" name="emailSignup" />
                                                     </label>
                                                     <label>
                                                         <span>Password</span>
-                                                        <input type="password" id="user-password" />
+                                                        <input type="passwordSignup" name="passwordSignup" />
                                                     </label>
                                                     <button type="submit" class="submit">Sign Up</button>
                                                     <label>
                                                         <div class="alert alert-danger" role="alert">
-                                                            <p>${mess}</p>
+                                                            <p>${messError}</p>
                                                         </div>
                                                     </label>
                                                 </div>

@@ -13,7 +13,7 @@ CREATE TABLE dbo.Income (
     UserID INT,
     [Date] DATE,
     [Value] DECIMAL(10, 2),
-    Detail TEXT,
+    Detail NVARCHAR(200),
     FOREIGN KEY (UserID) REFERENCES dbo.Account(ID)
 );
 
@@ -23,7 +23,7 @@ CREATE TABLE dbo.Expense (
     UserID INT,
     [Date] DATE,
     [Value] DECIMAL(10, 2),
-    Detail TEXT,
+    Detail NVARCHAR(200),
     FOREIGN KEY (UserID) REFERENCES dbo.Account(ID)
 );
 
@@ -35,7 +35,10 @@ VALUES ('test2', 'djtmethangtinhngu', N'Bố Quân dz', 'test2@example.com');
 INSERT INTO dbo.Account (Username, Password, Name, Email)
 VALUES ('test', 'djtmethangtinhngu', N'Bố Quân dz', 'asdas@example.com');
 
-Insert into Income(UserID, date, value,
+Insert into Income(UserID, Date, Value,Detail)
+Values ('1','12/12/2024','200000','địt mẹ thằng tỉnh');
+
+select * from In
 
 
 -- login
@@ -46,7 +49,7 @@ and [Password] = 'djtmethangtinhngu'
 -- getAllIncome
 
 select * from Income
-where [UserID] = 'test'
+where [UserID] = '1'
 
 //----------------------------------------
 drop table Expense

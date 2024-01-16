@@ -7,7 +7,6 @@ package controller;
 import DAO.accountDAO;
 import entity.Account;
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -31,7 +30,7 @@ public class loginControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -61,16 +60,41 @@ public class loginControl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String username = request.getParameter("user");
-        String password = request.getParameter("password");
+        String action = request.getParameter("action");
         accountDAO dao = new accountDAO();
-        Account a = dao.login(username, password);
-        if(a == null){
-            request.setAttribute("mess", "Wrong user or password");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
-        }else{
-            request.setAttribute("name",a.getName());
-            request.getRequestDispatcher("home").forward(request, response);
+        
+        if ("login".equals(action)) {
+            String username = request.getParameter("user");
+            String password = request.getParameter("password");
+            Account a = dao.login(username, password);
+            if (a == null) {
+                request.setAttribute("mess", "Wrong user or password");
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            } else {
+                request.setAttribute("name", a.getName());
+                request.getRequestDispatcher("home").forward(request, response);
+            }
+        }else if("signup".equals(action)){
+            String username = request.getParameter("usernameSignup");
+            String email = request.getParameter("emailusernameSignup");
+            String password = request.getParameter("passwordusernameSignup");
+            if(dao.checkDuplicateUsername(username) == false ){
+                request.setAttribute("messError", "User already exists");
+                 
+            }else if(dao.checkDuplicateEmail(email) == false){
+                request.setAttribute("messError", "Email already exists");
+            }else{
+                dao.signup(username, email, password);
+            }
+            
+            
+            String script = "<script type='text/javascript'>"
+                      + "toggleSignUp(event);"
+                      + "</script>";
+
+        // Gửi mã JavaScript về client
+        response.getWriter().write(script);
+        request.getRequestDispatcher("login").forward(request, response);
         }
     }
 
