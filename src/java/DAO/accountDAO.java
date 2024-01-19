@@ -37,8 +37,8 @@ public class accountDAO {
         }
         return null;
     }
-    
-    public boolean checkDuplicateUsername(String username){
+
+    public boolean checkDuplicateUsername(String username) {
         String query = "select * from Account\n"
                 + "where [username] = ?";
         try {
@@ -46,16 +46,16 @@ public class accountDAO {
             ps = conn.prepareStatement(query);
             ps.setString(1, username);
             rs = ps.executeQuery();
-            
-            if(rs.next()){
+
+            if (rs.next()) {
                 return false;
             }
         } catch (Exception e) {
         }
         return true;
     }
-    
-    public boolean checkDuplicateEmail(String email){
+
+    public boolean checkDuplicateEmail(String email) {
         String query = "select * from Account\n"
                 + "where [email] = ?";
         try {
@@ -63,8 +63,8 @@ public class accountDAO {
             ps = conn.prepareStatement(query);
             ps.setString(1, email);
             rs = ps.executeQuery();
-            
-            if(rs.next()){
+
+            if (rs.next()) {
                 return false;
             }
         } catch (Exception e) {
@@ -74,7 +74,7 @@ public class accountDAO {
 
     public void signup(String username, String email, String password) {
         String query = "INSERT INTO Account (Username, Password, Name, Email)\n"
-                + "VALUES (?, ?, ?,?);";
+                + "VALUES (?,?,?,?);";
         try {
             conn = new DBContext().getConnection();
             ps = conn.prepareStatement(query);
@@ -83,6 +83,8 @@ public class accountDAO {
             ps.setString(3, username);
             ps.setString(4, email);
             rs = ps.executeQuery();
+            ps.executeUpdate();
+
         } catch (Exception e) {
         }
     }

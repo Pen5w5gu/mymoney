@@ -18,7 +18,7 @@
     <body>
         <br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="cont">
-            <form class="form-signin" action="login" method="post">
+            <form class="form-signin" action="login" method="post" id="loginForm">
                 <div class="form sign-in">
                     <input type="hidden" name="action" value="login">
                     <h2>Welcome</h2>
@@ -42,8 +42,8 @@
 
                 </div>
             </form>
-                        
-            <form action="login" method="post" class="form-signup">
+
+            <form action="signup" method="post" class="form-signup" id="signupForm">
                 <div class="sub-cont">
                     <div class="img">
                         <input type="hidden" name="action" value="signup">
@@ -84,6 +84,7 @@
                                                 </div>
 
                                                 <script>
+
                                                     document.querySelector('.img__btn').addEventListener('click', function () {
                                                         document.querySelector('.cont').classList.toggle('s--signup');
                                                     });
@@ -108,5 +109,5 @@
                                                         $('#logreg-forms #cancel_signup').click(toggleSignUp);
                                                     });
                                                 </script>
-                                                 </body>
+                                                </body>
                                                 </html>
