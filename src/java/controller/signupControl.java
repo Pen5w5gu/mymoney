@@ -77,14 +77,16 @@ public class signupControl extends HttpServlet {
         String email = request.getParameter("emailusernameSignup");
         String password = request.getParameter("passwordusernameSignup");
         if (dao.checkDuplicateUsername(username) == false) {
+            request.setAttribute("mess", "Account registration failed");
             request.setAttribute("messError", "User already exists");
 
         } else if (dao.checkDuplicateEmail(email) == false) {
+            request.setAttribute("mess", "Account registration failed");
             request.setAttribute("messError", "Email already exists");
 
         } else {
             dao.signup(username, email, password);
-            request.setAttribute("mess", "Account successfully created");
+            request.setAttribute("mess", "Successful account registration");
             request.removeAttribute("messError");
         }
         
