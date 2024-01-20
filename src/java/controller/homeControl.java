@@ -12,6 +12,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
@@ -32,7 +33,10 @@ public class homeControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        accountDAO daoA = new  accountDAO();
+        accountDAO daoA = new accountDAO();
+        HttpSession InfomationUser = request.getSession();
+        String name = (String) InfomationUser.getAttribute("name");
+        
         
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }

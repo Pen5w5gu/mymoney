@@ -1,33 +1,35 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="vi">
 
 <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Page Title -->
     <title>MyMoney</title>
     <!-- Favicon -->
-    <link rel="icon" href="creative-studio\img\favicon.ico">
+    <link rel="icon" href="assets\img\favicon.ico">
     <!-- Bundle -->
     <link rel="stylesheet" href="vendor\css\bundle.min.css">
     <!-- Plugin Css -->
     <link rel="stylesheet" href="vendor\css\jquery.fancybox.min.css">
-    <link rel="stylesheet" href="creative-studio\css\owl.carousel.min.css">
-    <link rel="stylesheet" href="creative-studio\css\owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets\css\owl.carousel.min.css">
+    <link rel="stylesheet" href="assets\css\owl.theme.default.min.css">
     <link rel="stylesheet" href="vendor\css\swiper.min.css">
 
     <link rel="stylesheet" href="vendor\css\cubeportfolio.min.css">
     <!-- Revolution Slider CSS Files -->
-    <link rel="stylesheet" href="creative-studio\css\navigation.css">
-    <link rel="stylesheet" href="creative-studio\css\settings.css">
+    <link rel="stylesheet" href="assets\css\navigation.css">
+    <link rel="stylesheet" href="assets\css\settings.css">
     <!-- Slick CSS Files -->
     <link rel="stylesheet" href="vendor\css\slick.css">
     <link rel="stylesheet" href="vendor\css\slick-theme.css">
     <!-- Style Sheet -->
-    <link rel="stylesheet" href="creative-studio\css\style.css">
+    <link rel="stylesheet" href="assets\css\style.css">
     <!-- Custom Style CSS File -->
-    <link rel="stylesheet" href="creative-studio\css\custom.css">
+    <link rel="stylesheet" href="assets\css\custom.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar-nav" data-offset="90">
@@ -56,8 +58,8 @@
             class="navbar navbar-top-default navbar-expand-lg nav-three-circles black bottom-nav nav-box-shadow no-animation">
             <div class="container-fluid">
                 <a class="logo ml-lg-1" href="javascript:void(0)">
-                    <img src="creative-studio\img\logo.png" alt="logo" title="Logo" class="logo-default">
-                    <img src="creative-studio\img\logo2.png" alt="logo" title="Logo" class="logo-scrolled">
+                    <img src="assets\img\logo.png" alt="logo" title="Logo" class="logo-default">
+                    <img src="assets\img\logo2.png" alt="logo" title="Logo" class="logo-scrolled">
                 </a>
                 <div class="collapse navbar-collapse d-none d-lg-block">
                     <ul class="nav navbar-nav mx-auto">
@@ -72,7 +74,7 @@
                 </div>
                 <a href="javascript:void(0)"
                     class="btn-setting btn-hvr-up btn-hvr-whatsapp color-black mr-lg-3 d-none d-lg-block"><i
-                        class="fab fa-whatsapp"></i> Gi?i c?u NTQ</a>
+                        class="fab fa-whatsapp"></i> Giải cứu NTQ</a>
                 <!-- side menu open button -->
                 <a class="menu_bars d-inline-block menu-bars-setting animated-wrap sidemenu_toggle d-block d-lg-none">
                     <div class="menu-lines animated-element">
@@ -104,7 +106,7 @@
             <div class="inner-wrapper justify-content-center">
                 <div class="col-md-12 text-center">
                     <a href="javascript:void(0)" class="logo-full mb-4"><img
-                            src="creative-studio\img\logo-pure-white.png" alt=""></a>
+                            src="assets\img\logo-pure-white.png" alt=""></a>
                 </div>
                 <nav class="side-nav m-0">
                     <ul class="navbar-nav flex-lg-row">
@@ -164,7 +166,7 @@
                             data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                             style="z-index: 10; min-width: 556px; max-width: 556px; white-space: nowrap; font-size: 60px; line-height: 75px; font-weight: 300; letter-spacing: 0px;font-family: 'Montserrat', sans-serif;">
-                            Creative</div>
+                            Xin chào, ${name}</div>
 
                         <!-- LAYER Text -->
                         <div class="tp-caption color-black" data-x="['center','center','center','center']"
@@ -177,7 +179,7 @@
                             data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                             style="z-index: 10; min-width: 556px; max-width: 556px; white-space: nowrap; font-weight: 700; letter-spacing: 0px;font-family: 'Montserrat', sans-serif;">
-                            <div id="js-rotating">Digital Agency, Modern Works, Design Elevation </div>
+                            <div id="js-rotating">Thu nhập: 200 🐟, Chi tiêu: 100 🐟, Số dư: 100🐠 </div>
                         </div>
 
                         <!-- LAYER Text -->
@@ -190,8 +192,8 @@
                             data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                             style="z-index: 10; min-width: 650px; max-width: 650px; white-space: nowrap; font-weight: 400; letter-spacing: 0px;font-family: 'Source Sans Pro', sans-serif;">
-                            Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the
-                            industry?s standard dummy. Lorem Ipsum has been the industry?s standard dummy.
+                            Đây là thu nhập, chi tiêu và số dư còn lại của bạn trong tháng.<br>
+                            Hãy chi tiêu một cách thông minh chứ đừng làm thằng Tỉnh.
                         </div>
 
                         <!-- LAYER Button -->
@@ -202,8 +204,8 @@
                             data-textalign="['center','center','center','center']"
                             data-width="['160','160','160','160']"
                             style="z-index: 10; min-width: 960px; max-width: 960px">
-                            <a href="javascript:void(0)"
-                                class="btn-setting color-black btn-hvr-up btn-hvr-yellow link">learn more</a>
+                            <a href="#calander"
+                                class="scroll nav-link btn-setting color-black btn-hvr-up btn-hvr-yellow link">Xem chi tiết</a>
                         </div>
 
                         <!-- LAYER Cylinder -->
@@ -217,7 +219,7 @@
                             style="z-index: 1;">
                             <div class="rs-looped rs-slideloop" data-easing="Power0.easeInOut" data-speed="12"
                                 data-xs="0" data-xe="60" data-ys="100" data-ye="60"><img
-                                    src="creative-studio\img\slider-shape1.png" alt=""
+                                    src="assets\img\slider-shape1.png" alt=""
                                     data-ww="['51px','51px','51px','51px']" data-hh="['52px','52px','52px','52px']"
                                     data-no-retina=""> </div>
                         </div>
@@ -233,7 +235,7 @@
                             style="z-index: 1;">
                             <div class="rs-looped rs-slideloop" data-easing="Power0.easeInOut" data-speed="12"
                                 data-xs="0" data-xe="-50" data-ys="50" data-ye="20"><img
-                                    src="creative-studio\img\slider-shape2.png" alt=""
+                                    src="assets\img\slider-shape2.png" alt=""
                                     data-ww="['50px','50px','50px','50px']" data-hh="['14px','14px','14px','14px']"
                                     data-no-retina=""> </div>
                         </div>
@@ -249,7 +251,7 @@
                             style="z-index: 1;">
                             <div class="rs-looped rs-rotate" data-easing="Power0.easeIn" data-startdeg="0"
                                 data-enddeg="360" data-speed="15" data-origin="50% 50%"><img
-                                    src="creative-studio\img\slider-shape3.png" alt=""
+                                    src="assets\img\slider-shape3.png" alt=""
                                     data-ww="['67px','67px','67px','67px']" data-hh="['69px','69px','69px','69px']"
                                     data-no-retina=""> </div>
                         </div>
@@ -357,7 +359,7 @@
                             style="z-index: 1;">
                             <div class="rs-looped rs-slideloop" data-easing="Power0.easeInOut" data-speed="12"
                                 data-xs="0" data-xe="0" data-ys="10" data-ye="-50"><img
-                                    src="creative-studio\img\slider-shape4.png" alt=""
+                                    src="assets\img\slider-shape4.png" alt=""
                                     data-ww="['24px','24px','24px','24px']" data-hh="['87px','87px','87px','87px']"
                                     data-no-retina=""> </div>
                         </div>
@@ -373,7 +375,7 @@
                             style="z-index: 1;">
                             <div class="rs-looped rs-slideloop" data-easing="Power0.easeInOut" data-speed="12"
                                 data-ys="-40" data-ye="40" data-xs="0" data-xe="20"><img
-                                    src="creative-studio\img\slider-shape5.png" alt=""
+                                    src="assets\img\slider-shape5.png" alt=""
                                     data-ww="['44px','44px','44px','44px']" data-hh="['87px','87px','87px','87px']"
                                     data-no-retina=""> </div>
                         </div>
@@ -388,7 +390,7 @@
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                             style="z-index: 1;">
                             <div class="rs-looped rs-wave" data-speed="12" data-angle="90" data-radius="12px"
-                                data-origin="0% 0%"><img src="creative-studio\img\slider-shape6.png" alt=""
+                                data-origin="0% 0%"><img src="assets\img\slider-shape6.png" alt=""
                                     data-ww="['44px','44px','44px','44px']" data-hh="['87px','87px','87px','87px']"
                                     data-no-retina=""> </div>
                         </div>
@@ -405,7 +407,7 @@
                             style="z-index: 1;">
                             <div class="rs-looped rs-rotate" data-easing="Power0.easeIn" data-speed="150"
                                 data-startdeg="0" data-enddeg="360" data-origin="45% 45%"><img
-                                    src="creative-studio\img\circle-top-left.png" alt=""
+                                    src="assets\img\circle-top-left.png" alt=""
                                     data-ww="['394px','394px','394px','394px']"
                                     data-hh="['394px','394px','394px','394px']" data-no-retina=""> </div>
                         </div>
@@ -420,7 +422,7 @@
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                             style="z-index: 1;">
                             <div class="rs-looped rs-wave" data-speed="6" data-angle="0" data-radius="5px"
-                                data-origin="50% 50%"><img src="creative-studio\img\circle-top-right-inner.png" alt=""
+                                data-origin="50% 50%"><img src="assets\img\circle-top-right-inner.png" alt=""
                                     data-ww="['575px','575px','575px','575px']"
                                     data-hh="['571px','571px','571px','571px']"> </div>
                         </div>
@@ -435,7 +437,7 @@
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                             style="z-index: 1;">
                             <div class="rs-looped" data-easing="Power0.easeInOut" data-speed="0" data-xs="0" data-xe="0"
-                                data-ys="0" data-ye="0"><img src="creative-studio\img\circle-top-right.png" alt=""
+                                data-ys="0" data-ye="0"><img src="assets\img\circle-top-right.png" alt=""
                                     data-ww="['381px','381px','381px','381px']"
                                     data-hh="['380px','380px','380px','380px']" data-no-retina=""> </div>
                         </div>
@@ -448,7 +450,7 @@
                             data-frames='[{"delay":319.921875,"speed":500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                             style="z-index: 1;">
                             <div class="rs-looped rs-wave" data-speed="15" data-angle="90" data-radius="12px"
-                                data-origin="50% 50%"><img src="creative-studio\img\circle-center.png" alt=""
+                                data-origin="50% 50%"><img src="assets\img\circle-center.png" alt=""
                                     data-ww="['672px','672px','500px','320px']"
                                     data-hh="['673px','673px','500px','320px']" data-no-retina=""> </div>
                         </div>
@@ -464,7 +466,7 @@
                             style="z-index: 1;">
                             <div class="rs-looped rs-slideloop" data-easing="Power0.easeInOut" data-speed="30"
                                 data-xs="-90" data-xe="90" data-ys="0" data-ye="20"><img
-                                    src="creative-studio\img\arrows.png" alt="" data-ww="['97px','97px','97px','97px']"
+                                    src="assets\img\arrows.png" alt="" data-ww="['97px','97px','97px','97px']"
                                     data-hh="['98px','98px','98px','98px']" data-no-retina=""> </div>
                         </div>
 
@@ -485,7 +487,7 @@
             <div class="row">
                 <div class="col-lg-6 pr-5 mb-5 mb-lg-0 wow fadeInLeft">
                     <div class="rare-box"></div>
-                    <img src="creative-studio\img\about.jpg" class="about-img-small position-relative w-100" alt="">
+                    <img src="assets\img\about.jpg" class="about-img-small position-relative w-100" alt="">
                 </div>
                 <div class="col-lg-6 pl-6">
                     <div class="main-title text-lg-left offset-md-1 mb-0 wow fadeInUp" data-wow-delay="300ms">
@@ -567,7 +569,7 @@
             <div class="row wow fadeInUp team" data-wow-delay="300">
                 <div class="col-lg-6 col-xl-3 p-0 team-col ml-md-auto mr-md-0 mx-auto">
                     <div class="team-image">
-                        <img src="creative-studio\img\team1.jpg" alt="team1" class="m-image1">
+                        <img src="assets\img\team1.jpg" alt="team1" class="m-image1">
                     </div>
                     <div class="team-classic-content hvr-team pink">
                         <h3 class="mb-3 text-capitalize color-black">Jessica Jones</h3>
@@ -588,7 +590,7 @@
                     <div class="row">
                         <div class="col-md-12 order-md-1">
                             <div class="team-image">
-                                <img src="creative-studio\img\team2.jpg" alt="team2" class="m-image2">
+                                <img src="assets\img\team2.jpg" alt="team2" class="m-image2">
                             </div>
                         </div>
                         <div class="col-md-12 order-md-0">
@@ -612,7 +614,7 @@
                 <div class="w-100 d-none d-lg-block d-xl-none"></div>
                 <div class="col-lg-6 col-xl-3 p-0 team-col ml-md-auto mr-md-0 mx-auto team-row2">
                     <div class="team-image">
-                        <img src="creative-studio\img\team3.jpg" alt="team3" class="m-image3">
+                        <img src="assets\img\team3.jpg" alt="team3" class="m-image3">
                     </div>
                     <div class="team-classic-content hvr-team yellow">
                         <h3 class="mb-3 text-capitalize color-black">Nicole Cross</h3>
@@ -633,7 +635,7 @@
                     <div class="row">
                         <div class="col-md-12 order-md-1">
                             <div class="team-image2">
-                                <img src="creative-studio\img\team4.jpg" alt="team4" class="m-image2">
+                                <img src="assets\img\team4.jpg" alt="team4" class="m-image2">
                             </div>
                         </div>
                         <div class="col-md-12 order-md-0">
@@ -712,10 +714,10 @@
 
                 <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat no-transition">
                     <div class="cbp-item web-designs marketing">
-                        <a href="creative-studio\img\work1.jpg" class="cbp-caption cbp-lightbox"
+                        <a href="assets\img\work1.jpg" class="cbp-caption cbp-lightbox"
                             data-title="Bolt UI<br>by Tiberiu Neamu">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="creative-studio\img\work1.jpg" alt="work">
+                                <img src="assets\img\work1.jpg" alt="work">
                             </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="cbp-l-caption-alignCenter">
@@ -731,10 +733,10 @@
                         </a>
                     </div>
                     <div class="cbp-item graphic-designs seo">
-                        <a href="creative-studio\img\work2.jpg" class="cbp-caption cbp-lightbox"
+                        <a href="assets\img\work2.jpg" class="cbp-caption cbp-lightbox"
                             data-title="World Clock<br>by Paul Flavius Nechita">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="creative-studio\img\work2.jpg" alt="work">
+                                <img src="assets\img\work2.jpg" alt="work">
                             </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="cbp-l-caption-alignCenter">
@@ -750,10 +752,10 @@
                         </a>
                     </div>
                     <div class="cbp-item graphic-designs web-designs">
-                        <a href="creative-studio\img\work3.jpg" class="cbp-caption cbp-lightbox"
+                        <a href="assets\img\work3.jpg" class="cbp-caption cbp-lightbox"
                             data-title="WhereTO App<br>by Tiberiu Neamu">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="creative-studio\img\work3.jpg" alt="work">
+                                <img src="assets\img\work3.jpg" alt="work">
                             </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="cbp-l-caption-alignCenter">
@@ -769,10 +771,10 @@
                         </a>
                     </div>
                     <div class="cbp-item seo marketing">
-                        <a href="creative-studio\img\work6.jpg" class="cbp-caption cbp-lightbox"
+                        <a href="assets\img\work6.jpg" class="cbp-caption cbp-lightbox"
                             data-title="Remind~Me Widget<br>by Tiberiu Neamu">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="creative-studio\img\work6.jpg" alt="work">
+                                <img src="assets\img\work6.jpg" alt="work">
                             </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="cbp-l-caption-alignCenter">
@@ -789,10 +791,10 @@
                     </div>
 
                     <div class="cbp-item web-designs seo">
-                        <a href="creative-studio\img\work4.jpg" class="cbp-caption cbp-lightbox"
+                        <a href="assets\img\work4.jpg" class="cbp-caption cbp-lightbox"
                             data-title="Seemple* Music<br>by Tiberiu Neamu">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="creative-studio\img\work4.jpg" alt="work">
+                                <img src="assets\img\work4.jpg" alt="work">
                             </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="cbp-l-caption-alignCenter">
@@ -808,10 +810,10 @@
                         </a>
                     </div>
                     <div class="cbp-item web-designs marketing">
-                        <a href="creative-studio\img\work5.jpg" class="cbp-caption cbp-lightbox"
+                        <a href="assets\img\work5.jpg" class="cbp-caption cbp-lightbox"
                             data-title="iDevices<br>by Tiberiu Neamu">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="creative-studio\img\work5.jpg" alt="work">
+                                <img src="assets\img\work5.jpg" alt="work">
                             </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="cbp-l-caption-alignCenter">
@@ -944,22 +946,22 @@
 
                 <div class="testimonial-images">
                     <div class="owl-thumbs owl-dots d-lg-block d-none">
-                        <div class="owl-dot animated-wrap active"><img src="creative-studio\img\testimonial1.png" alt=""
+                        <div class="owl-dot animated-wrap active"><img src="assets\img\testimonial1.png" alt=""
                                 class="animated-element"></div>
-                        <div class="owl-dot animated-wrap"><img src="creative-studio\img\testimonial2.png" alt=""
+                        <div class="owl-dot animated-wrap"><img src="assets\img\testimonial2.png" alt=""
                                 class="animated-element"></div>
-                        <div class="owl-dot animated-wrap"><img src="creative-studio\img\testimonial3.png" alt=""
+                        <div class="owl-dot animated-wrap"><img src="assets\img\testimonial3.png" alt=""
                                 class="animated-element"></div>
-                        <div class="owl-dot animated-wrap"><img src="creative-studio\img\testimonial4.png" alt=""
+                        <div class="owl-dot animated-wrap"><img src="assets\img\testimonial4.png" alt=""
                                 class="animated-element"></div>
 
-                        <div class="owl-dot animated-wrap"><img src="creative-studio\img\testimonial5.png" alt=""
+                        <div class="owl-dot animated-wrap"><img src="assets\img\testimonial5.png" alt=""
                                 class="animated-element"></div>
-                        <div class="owl-dot animated-wrap"><img src="creative-studio\img\testimonial6.png" alt=""
+                        <div class="owl-dot animated-wrap"><img src="assets\img\testimonial6.png" alt=""
                                 class="animated-element"></div>
-                        <div class="owl-dot animated-wrap"><img src="creative-studio\img\testimonial7.jpg" alt=""
+                        <div class="owl-dot animated-wrap"><img src="assets\img\testimonial7.jpg" alt=""
                                 class="animated-element"></div>
-                        <div class="owl-dot animated-wrap"><img src="creative-studio\img\testimonial8.jpg" alt=""
+                        <div class="owl-dot animated-wrap"><img src="assets\img\testimonial8.jpg" alt=""
                                 class="animated-element"></div>
                     </div>
                 </div>
@@ -969,13 +971,10 @@
                         <div class="owl-carousel owl-theme testimonial-two hide-cursor mx-auto wow zoomIn"
                             data-wow-delay="400ms">
                             <div class="testimonial-item">
-                                <p class="color-black testimonial-para mb-15px"> Curabitur mollis bibendum luctus. Duis
-                                    suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in
-                                    maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi
-                                    finibus, vel tristique risus faucibus. </p>
+                                <p class="color-black testimonial-para mb-15px"> Năm nay bác cũng ngoài 60 rồi, bác nói thật chứ đcm sống 60 năm trên đời đây là lần đầu tiên bác thấy có cái website tuyệt vời như thế này các cháu ạ!</p>
                                 <div class="testimonial-post">
                                     <a href="javascript:void(0)" class="post"><img
-                                            src="creative-studio\img\testimonial1.png" alt="image"></a>
+                                            src="assets\img\testimonial1.png" alt="image"></a>
                                     <div class="text-content">
                                         <h5 class="color-black text-capitalize">David Walker</h5>
                                         <p class="color-grey"> Chairman, AcroEx </p>
@@ -990,17 +989,14 @@
                                 </div>
                             </div>
                             <div class="testimonial-item hide-cursor">
-                                <p class="color-black testimonial-para mb-15px"> Curabitur mollis bibendum luctus. Duis
-                                    suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in
-                                    maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi
-                                    finibus, vel tristique risus faucibus. </p>
+                                <p class="color-black testimonial-para mb-15px"> "Trên đời này, có làm thì mới có ăn", chào các bạn tôi là tác giả của câu nói trên, Tôi đánh giá website 9,5 điểm. </p>
 
                                 <div class="testimonial-post">
                                     <a href="javascript:void(0)" class="post"><img
-                                            src="creative-studio\img\testimonial2.png" alt="image"></a>
+                                            src="assets/img/testimonial2.jpg" alt="image"></a>
                                     <div class="text-content">
-                                        <h5 class="color-black text-capitalize">Christina Williams</h5>
-                                        <p class="color-grey"> HR Manager </p>
+                                        <h5 class="color-black text-capitalize">Huấn Róe</h5>
+                                        <p class="color-grey"> Huấn 9 ngón </p>
                                         <div class="rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -1019,7 +1015,7 @@
 
                                 <div class="testimonial-post">
                                     <a href="javascript:void(0)" class="post"><img
-                                            src="creative-studio\img\testimonial3.png" alt="image"></a>
+                                            src="assets\img\testimonial3.png" alt="image"></a>
                                     <div class="text-content">
                                         <h5 class="color-black text-capitalize">Sarah Jones</h5>
                                         <p class="color-grey"> Sales Executive </p>
@@ -1041,7 +1037,7 @@
 
                                 <div class="testimonial-post">
                                     <a href="javascript:void(0)" class="post"><img
-                                            src="creative-studio\img\testimonial4.png" alt="image"></a>
+                                            src="assets\img\testimonial4.png" alt="image"></a>
                                     <div class="text-content">
                                         <h5 class="color-black text-capitalize">Chris Gorgano</h5>
                                         <p class="color-grey"> Photographer </p>
@@ -1064,7 +1060,7 @@
 
                                 <div class="testimonial-post">
                                     <a href="javascript:void(0)" class="post"><img
-                                            src="creative-studio\img\testimonial5.png" alt="image"></a>
+                                            src="assets\img\testimonial5.png" alt="image"></a>
                                     <div class="text-content">
                                         <h5 class="color-black text-capitalize">Kate Carter</h5>
                                         <p class="color-grey"> Model </p>
@@ -1086,7 +1082,7 @@
 
                                 <div class="testimonial-post">
                                     <a href="javascript:void(0)" class="post"><img
-                                            src="creative-studio\img\testimonial6.png" alt="image"></a>
+                                            src="assets\img\testimonial6.png" alt="image"></a>
                                     <div class="text-content">
                                         <h5 class="color-black text-capitalize">Alex Curtis </h5>
                                         <p class="color-grey"> Manager </p>
@@ -1108,7 +1104,7 @@
 
                                 <div class="testimonial-post">
                                     <a href="javascript:void(0)" class="post"><img
-                                            src="creative-studio\img\testimonial7.jpg" alt="image"></a>
+                                            src="assets\img\testimonial7.jpg" alt="image"></a>
                                     <div class="text-content">
                                         <h5 class="color-black text-capitalize">Ashley Wilson</h5>
                                         <p class="color-grey"> Actor </p>
@@ -1123,14 +1119,14 @@
                                 </div>
                             </div>
                             <div class="testimonial-item">
-                                <p class="color-black testimonial-para mb-15px"> Curabitur mollis bibendum luctus. Duis
-                                    suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in
-                                    maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi
-                                    finibus, vel tristique risus faucibus. </p>
+                                <p class="color-black testimonial-para mb-15px"> 
+                                    Trần đời này tôi chưa thấy website nào tuyệt vời như thế này.
+                                    
+                                </p>
 
                                 <div class="testimonial-post">
                                     <a href="javascript:void(0)" class="post"><img
-                                            src="creative-studio\img\testimonial8.jpg" alt="image"></a>
+                                            src="assets\img\testimonial8.jpg" alt="image"></a>
                                     <div class="text-content">
                                         <h5 class="color-black text-capitalize">Johnny Perkins</h5>
                                         <p class="color-grey"> Athlete </p>
@@ -1161,7 +1157,7 @@
 
                 <div class="col-lg-6 col-md-12 p-0">
                     <div class="hover-effect">
-                        <img alt="blog" src="creative-studio\img\split-blog.jpg" class="about-img">
+                        <img alt="blog" src="assets\img\split-blog.jpg" class="about-img">
                     </div>
                 </div>
 
@@ -1175,7 +1171,7 @@
                             eiusmodt temp to the incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis a nostr a exercitation ullamco laboris nisi ut aliquip.</p>
 
-                        <a href="creative-studio\blog.html"
+                        <a href="assets\blog.html"
                             class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-pink">learn more</a>
                     </div>
                 </div>
@@ -1198,16 +1194,16 @@
                         <div class="text-center text-md-left">
 
                             <!--Address-->
-                            <p class="mb-3">123 Street New York City , United States Of America. </p>
+                            <p class="mb-3">Khu Công Nghệ Cao Hòa Lạc, km 29, Đại lộ, Thăng Long, Hà Nội, Việt Nam </p>
 
                             <!--Phone-->
-                            <p class="mb-3"> Office Telephone : 001 01085379709 <br>
-                                Mobile : 001 63165370895 </p>
+                            <p class="mb-3">
+                                Mobile : +84 832838833 </p>
 
                             <!--Email-->
-                            <p class="mb-3"> Email: <a href="mailto:email@website.com"
-                                    class="color-black">admin@website.com</a> <br>
-                                Inquiries: <a href="mailto:email@website.com" class="color-black">email@website.com</a>
+                            <p class="mb-3"> Email: <a href="mailto:quannthe171942@fpt.edu.vn"
+                                    class="color-black">quannthe171942@fpt.edu.vn</a> <br>
+                                Inquiries: <a href="mailto:email@website.com" class="color-black">TỉnhNgu@website.com</a>
                             </p>
 
                             <!--Timing-->
@@ -1242,7 +1238,7 @@
                         <li><a href="javascript:void(0)" class="wow fadeInDown pinterest"><i
                                     class="fab fa-pinterest-p"></i> </a> </li>
                     </ul>
-                    <p class="copyrights mt-2 mb-2">� 2020 MegaOne. Made with love by <a
+                    <p class="copyrights mt-2 mb-2">ï¿½ 2020 MegaOne. Made with love by <a
                             href="javascript:void(0)">themesindustry</a></p>
                 </div>
             </div>
@@ -1270,13 +1266,13 @@
     <script src="vendor\js\parallaxie.min.js"></script>
     <script src="vendor\js\wow.min.js"></script>
     <!-- Owl Carousel JS File -->
-    <script src="creative-studio\js\owl.carousel.js"></script>
+    <script src="assets\js\owl.carousel.js"></script>
     <!-- Slick JS File -->
     <script src="vendor\js\slick.min.js"></script>
     <!-- Tween Max Animation File -->
-    <script src="creative-studio\js\TweenMax.min.js"></script>
+    <script src="assets\js\TweenMax.min.js"></script>
     <!-- Morphtext File -->
-    <script src="creative-studio\js\morphext.min.js"></script>
+    <script src="assets\js\morphext.min.js"></script>
     <!-- REVOLUTION JS FILES -->
     <script src="vendor\js\jquery.themepunch.tools.min.js"></script>
     <script src="vendor\js\jquery.themepunch.revolution.min.js"></script>
@@ -1292,11 +1288,11 @@
     <script src="vendor\js\extensions\revolution.extension.video.min.js"></script>
 
     <!-- Google Map Api -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJRG4KqGVNvAPY4UcVDLcLNXMXk2ktNfY"></script>
-    <script src="creative-studio\js\maps.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZb1Gj_-T6nbUhXHho8X_NR-E9-mwqSEI"></script>
+    <script src="assets\js\maps.min.js"></script>
 
     <!-- custom script -->
-    <script src="creative-studio\js\script.js"></script>
+    <script src="assets\js\script.js"></script>
 
 </body>
 

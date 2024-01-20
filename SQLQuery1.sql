@@ -1,4 +1,6 @@
-﻿-- Tạo bảng người dùng
+﻿--Create table
+
+-- Tạo bảng người dùng
 CREATE TABLE dbo.Account (
     ID INT IDENTITY(1,1) PRIMARY KEY,
     Username VARCHAR(50) NOT NULL,
@@ -28,30 +30,49 @@ CREATE TABLE dbo.Expense (
 );
 
 
-//-----------------------------------------
+-----------------------------------------
+--------------SELECT---------------------
+-----------------------------------------
 
-INSERT INTO Account (Username, Password, Name, Email)
-VALUES ('test2', 'djtmethangtinhngu', N'Bố Quân dz', 'test2@example.com');
-INSERT INTO dbo.Account (Username, Password, Name, Email)
-VALUES ('test', 'djtmethangtinhngu', N'Bố Quân dz', 'asdas@example.com');
-
-Insert into Income(UserID, Date, Value,Detail)
-Values ('1','12/12/2024','200000','địt mẹ thằng tỉnh');
-
-select * from In
-
+select * from Account
+select * from Income
+select * from Expense
 
 -- login
 select * from Account
 where [Username] = 'test'
 and [Password] = 'djtmethangtinhngu'
 
--- getAllIncome
-
+-- getIncomeByUserID
 select * from Income
 where [UserID] = '1'
+
+-----------------------------------------
+--------------INSERT---------------------
+-----------------------------------------
+
+--Insert Account (Sign Up)
+INSERT INTO Account (Username, Password, Name, Email)
+VALUES ('test2', 'djtmethangtinhngu', N'Bố Quân dz', 'test2@example.com');
+
+-- Insert Income
+Insert into Income(UserID, Date, Value,Detail)
+Values ('1','12/12/2024','200000','địt mẹ thằng tỉnh');
+
+-- Insert Expense
+Insert into Expense(UserID, Date, Value,Detail)
+Values ('1','12/12/2024','200000','địt mẹ thằng tỉnh');
+
+-----------------------------------------
+--------------UPDATE---------------------
+-----------------------------------------
+UPDATE dbo.Account
+SET [Name] = N'Quân'
+WHERE ID = '1';
+
 
 //----------------------------------------
 drop table Expense
 drop table Income
 drop table Account
+delete from dbo.Account;

@@ -11,6 +11,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
@@ -63,20 +64,28 @@ public class loginControl extends HttpServlet {
         boolean checkEmpty = false;
         String username = request.getParameter("user");
         String password = request.getParameter("password");
-        if(username != null){
+
+        if (username != null) {
             checkEmpty = true;
         }
         Account a = dao.login(username, password);
-        if (a == null)   {
-            if(checkEmpty == true){
+
+        if (a == null) {
+            if (checkEmpty == true) {
                 request.setAttribute("mess", "Wrong user or password");
             }
             request.getRequestDispatcher("login.jsp").forward(request, response);
-            
+
         } else {
-            request.setAttribute("name", a.getName());
+            HttpSession InfomationUser = request.getSession();
+            InfomationUser.setAttribute("id", a.getID());
+            InfomationUser.setAttribute("name", a.getName());
+            InfomationUser.setAttribute("username", a.getUsername());
+            InfomationUser.setAttribute("email", a.getEmail());
+            
             request.removeAttribute("messError");
-            request.getRequestDispatcher("home").forward(request, response);            
+            request.removeAttribute("mess");
+            request.getRequestDispatcher("home").forward(request, response);
         }
 
     }

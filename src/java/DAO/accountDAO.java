@@ -82,9 +82,64 @@ public class accountDAO {
             ps.setString(2, password);
             ps.setString(3, username);
             ps.setString(4, email);
-            rs = ps.executeQuery();
             ps.executeUpdate();
 
+        } catch (Exception e) {
+        }
+    }
+
+    public void changeInfo(String base, int id, String info) {
+        String query = "UPDATE Account\n"
+                + "SET" + base + "= ?\n"
+                + "WHERE ID = ?;";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, info);
+            ps.setInt(2, id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
+    public void changeName(int id, String name) {
+        String query = "UPDATE Account\n"
+                + "SET [Name] = ?\n"
+                + "WHERE ID = ?;";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, name);
+            ps.setInt(2, id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
+    public void changePassword(int id, String password) {
+        String query = "UPDATE Account\n"
+                + "SET [password] = ?\n"
+                + "WHERE ID = ?;";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, password);
+            ps.setInt(2, id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
+    public void changeEmail(int id, String email) {
+        String query = "UPDATE Account\n"
+                + "SET [email] = ?\n"
+                + "WHERE ID = ?;";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, email);
+            ps.setInt(2, id);
+            ps.executeUpdate();
         } catch (Exception e) {
         }
     }
