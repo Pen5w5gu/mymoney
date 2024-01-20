@@ -74,8 +74,8 @@ public class signupControl extends HttpServlet {
         accountDAO dao = new accountDAO();
         
         String username = request.getParameter("usernameSignup");
-        String email = request.getParameter("emailusernameSignup");
-        String password = request.getParameter("passwordusernameSignup");
+        String email = request.getParameter("emailSignup");
+        String password = request.getParameter("passwordSignup");
         if (dao.checkDuplicateUsername(username) == false) {
             request.setAttribute("mess", "Account registration failed");
             request.setAttribute("messError", "User already exists");
