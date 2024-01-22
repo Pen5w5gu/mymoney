@@ -9,6 +9,18 @@ CREATE TABLE dbo.Account (
     Email VARCHAR(100) UNIQUE
 );
 
+-- Thể loại thu nhập 
+CREATE TABLE dbo.IncomeCategory (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    [Name] NVARCHAR(50)
+);
+
+--Thể loại chi tiêu
+CREATE TABLE dbo.ExpenseCategory (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    [Name] NVARCHAR(50) 
+);
+
 -- Tạo bảng thu nhập
 CREATE TABLE dbo.Income (
     ID INT IDENTITY(1,1) PRIMARY KEY,
@@ -16,7 +28,9 @@ CREATE TABLE dbo.Income (
     [Date] DATE,
     [Value] DECIMAL(10, 2),
     Detail NVARCHAR(200),
-    FOREIGN KEY (UserID) REFERENCES dbo.Account(ID)
+	CategoryID int,
+    FOREIGN KEY (UserID) REFERENCES dbo.Account(ID),
+	FOREIGN KEY (CategoryID) REFERENCES dbo.IncomeCategory(ID)
 );
 
 -- Tạo bảng chi tiêu
@@ -26,7 +40,9 @@ CREATE TABLE dbo.Expense (
     [Date] DATE,
     [Value] DECIMAL(10, 2),
     Detail NVARCHAR(200),
-    FOREIGN KEY (UserID) REFERENCES dbo.Account(ID)
+	CategoryID int,
+    FOREIGN KEY (UserID) REFERENCES dbo.Account(ID),
+	FOREIGN KEY (CategoryID) REFERENCES dbo.ExpenseCategory(ID)
 );
 
 
