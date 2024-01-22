@@ -16,16 +16,18 @@ public class Expense {
     private Date date;
     private int expense;
     private String detail;
+    private int CategoryID;
 
     public Expense() {
     }
 
-    public Expense(int ID, int userID, Date date, int expense, String detail) {
+    public Expense(int ID, int userID, Date date, int expense, String detail, int CategoryID) {
         this.ID = ID;
         this.userID = userID;
         this.date = date;
         this.expense = expense;
         this.detail = detail;
+        this.CategoryID = CategoryID;
     }
 
     public int getID() {
@@ -67,6 +69,12 @@ public class Expense {
     public void setDetail(String detail) {
         this.detail = detail;
     }
-    
-    
+
+    public int getCategoryID() {
+        return CategoryID;
+    }
+
+    public void setCategoryID(int CategoryID) {
+        this.CategoryID = CategoryID;
+    }
 }

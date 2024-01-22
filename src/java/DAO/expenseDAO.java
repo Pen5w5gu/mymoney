@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package DAO;
+
 import context.DBContext;
 import entity.Expense;
 import java.sql.Connection;
@@ -17,7 +18,8 @@ import java.util.List;
  * @author Admin
  */
 public class expenseDAO {
-     Connection conn = null;
+
+    Connection conn = null;
     PreparedStatement ps = null;
     ResultSet rs = null;
 
@@ -31,16 +33,16 @@ public class expenseDAO {
             ps.setInt(1, userid);
             rs = ps.executeQuery();
             while (true) {
-                list.add(new Expense(rs.getInt(1), rs.getInt(2), rs.getDate(3), rs.getInt(4), rs.getNString(5)));
+                list.add(new Expense(rs.getInt(1), rs.getInt(2), rs.getDate(3), rs.getInt(4), rs.getNString(5), rs.getInt(6)));
             }
         } catch (Exception e) {
         }
         return list;
-}
+    }
 
-public boolean insertExpense(int userid, Date date, int value, String detail) {
-        String query = "Insert into Expense(UserID, Date, Value,Detail)\n"
-                + "Values (?,?,?,?);";
+    public boolean insertExpense(int userid, Date date, int value, String detail, int CategoryID) {
+        String query = "Insert into Expense(UserID, Date, Value,Detail, CategoryID)\n"
+                + "Values (?,?,?,?,?);";
         try {
             conn = new DBContext().getConnection();
             ps = conn.prepareStatement(query);
@@ -48,10 +50,11 @@ public boolean insertExpense(int userid, Date date, int value, String detail) {
             ps.setDate(2, date);
             ps.setInt(3, value);
             ps.setString(4, detail);
+            ps.setInt(5, CategoryID);
             rs = ps.executeQuery();
-            
+
             int rowsAffected = ps.executeUpdate();
-            
+
             return rowsAffected > 0;
         } catch (Exception e) {
         }
