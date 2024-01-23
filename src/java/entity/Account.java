@@ -12,17 +12,19 @@ public class Account {
     private int ID;
     private String Username;
     private String password;
-    private String name;
+    private String firstname;
+    private String lastname;
     private String email;
 
     public Account() {
     }
 
-    public Account(int ID, String Username, String password, String name, String email) {
+    public Account(int ID, String Username, String password, String firstname, String lastname, String email) {
         this.ID = ID;
         this.Username = Username;
         this.password = password;
-        this.name = name;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.email = email;
     }
 
@@ -50,12 +52,20 @@ public class Account {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getEmail() {
@@ -65,6 +75,8 @@ public class Account {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    
     
     
     

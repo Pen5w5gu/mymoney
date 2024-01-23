@@ -5,9 +5,10 @@
 package controller;
 
 import DAO.accountDAO;
-import entity.Account;
 import java.io.IOException;
+import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -17,7 +18,8 @@ import jakarta.servlet.http.HttpSession;
  *
  * @author quann
  */
-public class loginControl extends HttpServlet {
+@WebServlet(name = "changeInfoControl", urlPatterns = {"/changeInfo"})
+public class changeInfoControl extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,7 +33,18 @@ public class loginControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
+        try ( PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet changeInfoControl</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet changeInfoControl at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -60,40 +73,18 @@ public class loginControl extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        accountDAO dao = new accountDAO();
-        boolean checkEmpty = false;
-        String username = request.getParameter("user");
-        String password = request.getParameter("password");
-
-        if (username != null) {
-            checkEmpty = true;
-        }
-        Account a = dao.login(username, password);
-
-        if (a == null) {
-            if (checkEmpty == true) {
-                request.setAttribute("mess", "Wrong user or password");
-            }
-            request.getRequestDispatcher("login.jsp").forward(request, response);
-
-        } else {
-            HttpSession InfomationUser = request.getSession();
-            InfomationUser.setAttribute("id", a.getID());
-            if(a.getFirstname() == null){
-                InfomationUser.setAttribute("name",a.getLastname());
-            }else{
-                InfomationUser.setAttribute("name", a.getFirstname() +" "+ a.getLastname());
-            }
-            InfomationUser.setAttribute("firstname", a.getFirstname());
-            InfomationUser.setAttribute("lastname", a.getLastname());
-            InfomationUser.setAttribute("username", a.getUsername());
-            InfomationUser.setAttribute("email", a.getEmail());
-            
-            request.removeAttribute("messError");
-            request.removeAttribute("mess");
-            request.getRequestDispatcher("home").forward(request, response);
-        }
-
+        accountDAO daoA = new accountDAO();
+        HttpSession InfomationUser = request.getSession();
+        int id = (int)InfomationUser.getAttribute("id");
+        
+        
+        String firstname = request.getParameter("firstname");
+        String lastname = request.getParameter("lastname");
+        daoA.changeInfo(firstname, id, firstname);
+        daoA.changeInfo(lastname, id, lastname);
+        
+        String oldpassword = request.getParameter("oldpassword");
+        String newpassword = request.getParameter("newpassword");
     }
 
     /**

@@ -31,7 +31,7 @@ public class accountDAO {
             ps.setString(2, password);
             rs = ps.executeQuery();
             while (rs.next()) {
-                return new Account(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getNString(4), rs.getString(5));
+                return new Account(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getNString(4),rs.getNString(5), rs.getString(6));
             }
         } catch (Exception e) {
         }
@@ -73,7 +73,7 @@ public class accountDAO {
     }
 
     public void signup(String username, String email, String password) {
-        String query = "INSERT INTO Account (Username, Password, Name, Email)\n"
+        String query = "INSERT INTO Account (Username, Password, [LastName], Email)\n"
                 + "VALUES (?,?,?,?);";
         try {
             conn = new DBContext().getConnection();

@@ -5,7 +5,8 @@ CREATE TABLE dbo.Account (
     ID INT IDENTITY(1,1) PRIMARY KEY,
     Username VARCHAR(50) NOT NULL,
     [Password] VARCHAR(255) NOT NULL,
-    [Name] NVARCHAR(100),
+    [FirstName] NVARCHAR(100),
+	[LastName] NVARCHAR(100),
     Email VARCHAR(100) UNIQUE
 );
 
@@ -45,6 +46,7 @@ CREATE TABLE dbo.Expense (
 	FOREIGN KEY (CategoryID) REFERENCES dbo.ExpenseCategory(ID)
 );
 
+-- Tạo bảng Event từ bảng Income và Expense
 
 -----------------------------------------
 --------------SELECT---------------------

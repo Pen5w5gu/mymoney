@@ -35,8 +35,8 @@ public class homeControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         accountDAO daoA = new accountDAO();
         HttpSession InfomationUser = request.getSession();
-        String name = (String) InfomationUser.getAttribute("name");
         
+        String name = (String) InfomationUser.getAttribute("name");
         
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
