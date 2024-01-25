@@ -13,13 +13,15 @@ CREATE TABLE dbo.Account (
 -- Thể loại thu nhập 
 CREATE TABLE dbo.IncomeCategory (
     ID INT IDENTITY(1,1) PRIMARY KEY,
-    [Name] NVARCHAR(50)
+    [Name] NVARCHAR(50),
+	imgUrl varchar(100)
 );
 
 --Thể loại chi tiêu
 CREATE TABLE dbo.ExpenseCategory (
     ID INT IDENTITY(1,1) PRIMARY KEY,
-    [Name] NVARCHAR(50) 
+    [Name] NVARCHAR(50),
+	imgUrl varchar(100)
 );
 
 -- Tạo bảng thu nhập
@@ -55,6 +57,7 @@ CREATE TABLE dbo.Expense (
 select * from Account
 select * from Income
 select * from Expense
+select * from IncomeCategory
 
 -- login
 select * from Account
@@ -74,12 +77,27 @@ INSERT INTO Account (Username, Password, Name, Email)
 VALUES ('test2', 'djtmethangtinhngu', N'Bố Quân dz', 'test2@example.com');
 
 -- Insert Income
-Insert into Income(UserID, Date, Value,Detail)
-Values ('1','12/12/2024','200000','địt mẹ thằng tỉnh');
+Insert into Income(UserID, Date, Value,Detail,CategoryID)
+Values ('1','12/12/2024','200000','Lương hưu','1');
 
 -- Insert Expense
-Insert into Expense(UserID, Date, Value,Detail)
+Insert into Expense(UserID, Date, Value,Detail, CategoryID)
 Values ('1','12/12/2024','200000','địt mẹ thằng tỉnh');
+
+Insert IncomeCategory([Name],[imgUrl])
+values('Salary','salary');
+Insert IncomeCategory([Name],[imgUrl])
+values('Pocket money','pocket');
+Insert IncomeCategory([Name],[imgUrl])
+values('Bonus','bonus');
+Insert IncomeCategory([Name],[imgUrl])
+values('Slide Job','slidejob');
+Insert IncomeCategory([Name],[imgUrl])
+values('Investment','investment');
+Insert IncomeCategory([Name],[imgUrl])
+values('Extra','extra');
+
+
 
 -----------------------------------------
 --------------UPDATE---------------------
@@ -90,6 +108,8 @@ WHERE ID = '1';
 
 
 //----------------------------------------
+drop table IncomeCategory
+drop table ExpenseCategory
 drop table Expense
 drop table Income
 drop table Account
